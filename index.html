@@ -1268,6 +1268,61 @@
       line-height: 1.5;
     }
 
+    /* ─── DISCLAIMER NOTICE ─── */
+    .disclaimer-notice {
+      background: #fff8e1;
+      border: 2px solid #f9a825;
+      border-left: 6px solid #e65100;
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin: 28px 0 32px;
+    }
+
+    .disclaimer-notice .disclaimer-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      line-height: 1.1;
+    }
+
+    .disclaimer-notice .disclaimer-title {
+      font-size: 15px;
+      font-weight: 900;
+      color: #c43d00;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .disclaimer-notice .disclaimer-text {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #4a3000;
+    }
+
+    .disclaimer-notice .disclaimer-text strong {
+      color: #c43d00;
+      font-weight: 800;
+    }
+
+    @media (max-width: 480px) {
+      .disclaimer-notice {
+        padding: 16px 18px;
+        gap: 12px;
+        margin: 20px 0 24px;
+      }
+      .disclaimer-notice .disclaimer-icon {
+        font-size: 24px;
+      }
+      .disclaimer-notice .disclaimer-title {
+        font-size: 14px;
+      }
+      .disclaimer-notice .disclaimer-text {
+        font-size: 13.5px;
+      }
+    }
+
     /* barangay suggestions */
     #barangaySuggestions {
       position: absolute;
@@ -2124,14 +2179,26 @@
       <p class="section-desc">Sagutan ang form sa ibaba para makakuha ng iyong tracking number at ma-ensure ang iyong
         slot sa Araw ng Mamamayan 2026.</p>
 
+      <div class="disclaimer-notice">
+        <div class="disclaimer-icon">⚠️</div>
+        <div>
+          <div class="disclaimer-title">Hindi pa ito opisyal na YAKAP registration</div>
+          <div class="disclaimer-text">
+            Ang form na ito ay para mas <strong>maayos ang proseso</strong> sa araw ng event.<br>
+            Ang tunay na YAKAP registration ay sa <strong>Mayo 23, 2026</strong> sa SM City San Pedro.
+          </div>
+        </div>
+      </div>
+
       <div class="form-wrap">
         <div class="form-head">
           <div class="form-head-title">Araw ng Mamamayan 2026 — Pre-Registration</div>
           <div class="form-head-sub">YAKAP Assistance & Mika Caravan · In partnership with Qualicheck Diagnostic Clinic
           </div>
           <div class="form-head-event">
-            📅 &nbsp; <strong>Mayo 23, 2026</strong> &nbsp;·&nbsp; 10:00 AM – 4:00 PM &nbsp;·&nbsp; SM City San Pedro
+            📅 &nbsp; <strong>Mayo 23, 2026</strong>10:00 AM – 4:00 PM
           </div>
+
         </div>
 
         <div class="form-body">
@@ -2312,6 +2379,9 @@
         📍 <strong>SM City San Pedro, Laguna</strong><br><br>
         I-present ang tracking number mo upon arrival. Dalhin ang iyong valid ID at PhilHealth ID. Dumating nang maaga —
         first come, first served!
+      </div>
+      <div style="background:#fff8e1;border:2px solid #f9a825;border-left:5px solid #e65100;border-radius:10px;padding:16px 18px;margin:16px 0;font-size:14px;color:#4a3000;line-height:1.7;text-align:left;">
+        ⚠️ &nbsp;<strong style="color:#c43d00;">Paalala:</strong> Ang tracking number na ito ay <strong style="color:#c43d00;">hindi pa opisyal na pagpapatala sa YAKAP.</strong> Pumunta pa rin sa event sa Mayo 23 para makumpleto ang iyong YAKAP registration.
       </div>
       <div class="modal-desc" style="font-size:12px;">I-screenshot o i-download ang iyong ticket. Ipresenta ito sa araw
         ng event.</div>
