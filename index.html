@@ -2482,8 +2482,8 @@
     }
 
     // ─── FORM LOGIC ───
-    const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxpy5_yjipdzQupxeOGLl2h8lYnWhPMaMVoXwXorKZbxQcNP2TlmEK8DDfjwP2zjNkPwg/exec';
-    const SUBMIT_SECRET = 'QDC-YAKAP-2026';
+    const PUBLIC_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxpy5_yjipdzQupxeOGLl2h8lYnWhPMaMVoXwXorKZbxQcNP2TlmEK8DDfjwP2zjNkPwg/exec';
+    const SUBMIT_SECRET = 'QDC-YAKAP-2026-PUBLIC';
     const COOLDOWN = 60000;
     let lastSubmit = 0;
     let currentTracking = '';
@@ -2561,21 +2561,10 @@
     });
 
     // ─── GENERATE TRACKING ───
-    async function generateTracking() {
+    function generateTracking() {
       const year = new Date().getFullYear();
-      let existing = new Set();
-      try {
-        const res = await fetch(`${GOOGLE_SHEET_URL}?action=list&secret=${encodeURIComponent(SUBMIT_SECRET)}`);
-        const json = await res.json();
-        if (json.success && json.records) json.records.forEach(r => existing.add(r.tracking));
-      } catch (e) { }
-      let tracking, attempts = 0;
-      do {
-        const d = String(Math.floor(100000 + Math.random() * 900000));
-        tracking = `QC-${year}-${d}`;
-        attempts++;
-      } while (existing.has(tracking) && attempts < 100);
-      return tracking;
+      const d = String(Math.floor(100000 + Math.random() * 900000));
+      return `QC-${year}-${d}`;
     }
 
     function sendToSheets(fields) {
@@ -2597,7 +2586,7 @@
         company: fields.company || '',
         qdcProgramDate: 'May 23, 2026 (Araw ng Mamamayan)',
       };
-      fetch(GOOGLE_SHEET_URL, {
+      fetch(PUBLIC_SHEET_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify(payload)
@@ -2649,10 +2638,8 @@
       btn.disabled = true;
       showLoading('Sinusumite ang iyong registration…');
 
-      setTimeout(async () => {
-        showLoading('Ginagawa ang iyong tracking number…');
-        const tracking = await generateTracking();
-        hideLoading();
+      setTimeout(() => {
+        const tracking = generateTracking();
 
         currentTracking = tracking;
         fields.tracking = tracking;
@@ -2685,6 +2672,7 @@
         new QRCode(qrDiv, { text: tracking, width: 80, height: 80, colorDark: '#4A0E8F', colorLight: '#fff' });
 
         document.getElementById('modalTracking').textContent = tracking;
+        hideLoading();
         document.getElementById('successModal').classList.add('show');
         btn.disabled = false;
       }, 1400);
