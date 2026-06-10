@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Araw ng Mamamayan 2026 | Pre-Registration</title>
   <meta name="description"
-    content="Libre ang serbisyong medikal para sa lahat ng PhilHealth members. Pre-register na ngayon para sa Araw ng Mamamayan 2026 — May 23, 2026 sa SM City San Pedro.">
+    content="Libre ang serbisyong medikal para sa lahat ng PhilHealth members. Pre-register na ngayon para sa Araw ng Mamamayan 2026 — June 20, 2026 sa SM City San Pedro.">
   <meta property="og:title" content="Araw ng Mamamayan 2026 | Pre-Registration">
   <meta property="og:description"
-    content="LIBRENG serbisyong medikal. May 23, 2026 · SM City San Pedro. Pre-register na!">
+    content="LIBRENG serbisyong medikal. June 20, 2026 · SM City San Pedro. Pre-register na!">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Open Graph (Facebook, Messenger, Viber, iMessage, LinkedIn) -->
   <meta property="og:title" content="Araw ng Mamamayan 2026 | Pre-Registration">
   <meta property="og:description"
-    content="LIBRENG serbisyong medikal. May 23, 2026 · SM City San Pedro. Pre-register na!">
+    content="LIBRENG serbisyong medikal. June 20, 2026 · SM City San Pedro. Pre-register na!">
   <meta property="og:image"
     content="https://raw.githubusercontent.com/qualichecktech/qdc-araw-ng-mamamayan/refs/heads/main/thumbnail.png">
   <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Araw ng Mamamayan 2026 | Pre-Registration">
   <meta name="twitter:description"
-    content="LIBRENG serbisyong medikal. May 23, 2026 · SM City San Pedro. Pre-register na!">
+    content="LIBRENG serbisyong medikal. June 20, 2026 · SM City San Pedro. Pre-register na!">
   <meta name="twitter:image"
     content="https://raw.githubusercontent.com/qualichecktech/qdc-araw-ng-mamamayan/refs/heads/main/thumbnail.png">
 
@@ -67,6 +67,14 @@
       --ease: cubic-bezier(0.4, 0, 0.2, 1);
       --font: 'Sora', sans-serif;
       --font-serif: 'Libre Baskerville', Georgia, serif;
+      /* Pride rainbow accent (subtle, tasteful) */
+      --pride-red: #E8524A;
+      --pride-orange: #F4914A;
+      --pride-yellow: #F6C244;
+      --pride-green: #4BAD6F;
+      --pride-blue: #4A7FC1;
+      --pride-violet: #7B52AB;
+      --pride-gradient: linear-gradient(90deg, #E8524A, #F4914A, #F6C244, #4BAD6F, #4A7FC1, #7B52AB);
     }
 
     *,
@@ -97,7 +105,8 @@
       z-index: 1000;
       background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(24px);
-      border-bottom: 3px solid var(--purple);
+      border-bottom: 3px solid transparent;
+      border-image: var(--pride-gradient) 1;
       padding: 0 1.5rem;
       height: 64px;
       display: flex;
@@ -539,6 +548,20 @@
       letter-spacing: 0.8px;
       text-transform: uppercase;
       margin-bottom: 16px;
+      position: relative;
+    }
+
+    /* Subtle rainbow underline on section chips */
+    .section-chip::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 10%;
+      right: 10%;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--pride-gradient);
+      opacity: 0.7;
     }
 
     .section-title {
@@ -662,7 +685,7 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--purple), var(--blue));
+      background: var(--pride-gradient);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s var(--ease);
@@ -904,7 +927,7 @@
       left: calc(12.5% + 20px);
       right: calc(12.5% + 20px);
       height: 2px;
-      background: linear-gradient(90deg, var(--purple), var(--blue));
+      background: var(--pride-gradient);
       z-index: 0;
       display: none;
     }
@@ -930,7 +953,7 @@
       height: 44px;
       border-radius: 50%;
       margin: 0 auto 16px;
-      background: linear-gradient(135deg, var(--purple), var(--blue));
+      background: var(--pride-gradient);
       color: white;
       font-size: 18px;
       font-weight: 900;
@@ -1343,6 +1366,13 @@
       display: none;
     }
 
+    /* ─── PRIDE RAINBOW BAR ─── */
+    .pride-bar {
+      height: 5px;
+      background: var(--pride-gradient);
+      width: 100%;
+    }
+
     /* ─── FOOTER ─── */
     footer {
       background: var(--purple-deep);
@@ -1484,7 +1514,8 @@
       box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
       transform: scale(0.9);
       transition: transform 0.3s;
-      border-top: 6px solid var(--purple);
+      border-top: 6px solid transparent;
+      border-image: var(--pride-gradient) 1;
     }
 
     .modal-overlay.show .modal {
@@ -1956,7 +1987,7 @@
         <div class="about-content">
           <div class="about-highlight">
             <p>Ang <strong>Araw ng Mamamayan 2026</strong> ay isang espesyal na outreach event ng <strong>YAKAP
-                Assistance at Mika Caravan</strong>, sa pakikipagtulungan ng <strong>Qualicheck Diagnostic
+                Assistance at AMIGA Caravan</strong>, sa pakikipagtulungan ng <strong>Qualicheck Diagnostic
                 Clinic</strong>, para bigyan ng libre at de-kalidad na serbisyong pangkalusugan ang bawat pamilyang
               Pilipino.</p>
           </div>
@@ -1969,7 +2000,7 @@
           <div class="tags">
             <span class="tag">#ArawngMamamayan2026</span>
             <span class="tag">#YakapAssistance</span>
-            <span class="tag">#MikaCaravan</span>
+            <span class="tag">#AMIGA</span>
             <span class="tag">#QualicheckCares</span>
             <span class="tag">#FreeCheckup</span>
             <span class="tag">#SanPedroLaguna</span>
@@ -2046,9 +2077,8 @@
           </div>
           <div class="medicine-info">
             <h3>FREE MAINTENANCE MEDICINE</h3>
-            <p>May kasamang maintenance medicine support upang makatulong sa tuloy-tuloy na pangangalaga sa inyong
-              kalusugan at wellness.</p>
-            <div class="medicine-badge">✅ Kasama sa Package</div>
+            <p>Kasamang maintenance medicine support na nagkakahalaga ng <strong style="color:var(--yellow);">₱20,000</strong> — magtagal ng 1 linggo ang gamot para sa tuloy-tuloy na pangangalaga sa inyong kalusugan at wellness.</p>
+            <div class="medicine-badge">✅ Worth ₱20,000 · Good for 1 Week</div>
           </div>
         </div>
 
@@ -2147,7 +2177,7 @@
           <div class="step-num-wrap">3</div>
           <div class="step-icon">🏙️</div>
           <div class="step-title">Pumunta sa SM San Pedro</div>
-          <div class="step-desc">Pumunta sa SM City San Pedro sa Mayo 23, 2026 mula 10:00 AM hanggang 4:00 PM. Dalhin
+          <div class="step-desc">Pumunta sa SM City San Pedro sa Hunyo 20, 2026 mula 9:00 AM hanggang 2:00 PM. Dalhin
             ang iyong valid ID at tracking number.</div>
         </div>
         <div class="step-box">
@@ -2186,7 +2216,7 @@
           <div class="disclaimer-title">Hindi pa ito opisyal na YAKAP registration</div>
           <div class="disclaimer-text">
             Ang form na ito ay para mas <B>maayos ang proseso</B> sa araw ng event.<br>
-            Ang tunay na YAKAP registration ay sa <B>Mayo 23, 2026</B> sa SM City San Pedro.
+            Ang tunay na YAKAP registration ay sa <B>Hunyo 20, 2026</B> sa SM City San Pedro.
           </div>
         </div>
       </div>
@@ -2194,10 +2224,10 @@
       <div class="form-wrap">
         <div class="form-head">
           <div class="form-head-title">Araw ng Mamamayan 2026 — Pre-Registration</div>
-          <div class="form-head-sub">YAKAP Assistance & Mika Caravan · In partnership with Qualicheck Diagnostic Clinic
+          <div class="form-head-sub">YAKAP Assistance & AMIGA Caravan · In partnership with Qualicheck Diagnostic Clinic
           </div>
           <div class="form-head-event">
-            📅 &nbsp; <strong>Mayo 23, 2026</strong>10:00 AM – 4:00 PM
+            📅 &nbsp; <strong>Hunyo 20, 2026</strong> &nbsp;·&nbsp; 9:00 AM – 2:00 PM
           </div>
 
         </div>
@@ -2309,11 +2339,11 @@
             <div class="form-group full">
               <label class="form-label">QDC Program Date</label>
               <div class="input-wrap valid">
-                <input class="form-input" id="qdcProgramDate" type="text" value="May 23, 2026 (Araw ng Mamamayan)"
+                <input class="form-input" id="qdcProgramDate" type="text" value="June 20, 2026 (Araw ng Mamamayan)"
                   readonly style="opacity:0.75;cursor:not-allowed;background:var(--bg);">
                 <span class="valid-icon">✓</span>
               </div>
-              <span class="form-hint">Nakatakda na ang petsa ng programa — Mayo 23, 2026.</span>
+              <span class="form-hint">Nakatakda na ang petsa ng programa — Hunyo 20, 2026.</span>
             </div>
 
           </div>
@@ -2336,24 +2366,27 @@
     </div>
   </section>
 
+  <!-- PRIDE RAINBOW BAR -->
+  <div class="pride-bar"></div>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-brand">Araw ng Mamamayan 2026</div>
     <div class="footer-tagline">Serbisyong may puso at malasakit para sa bawat San Pedronense</div>
     <div class="footer-partners">
       <span class="partner-chip">YAKAP Assistance</span>
-      <span class="partner-chip">Mika Caravan</span>
+      <span class="partner-chip">AMIGA Caravan</span>
       <span class="partner-chip">Qualicheck Diagnostic Clinic</span>
       <span class="partner-chip">PhilHealth</span>
     </div>
-    <div class="footer-contact">Para sa katanungan: <a href="tel:09922568714">0992 256 8714</a></div>
+    <div class="footer-contact">Para sa katanungan: <a href="https://www.facebook.com/qualicheckdiagnosticclinic" target="_blank" rel="noopener">FB Page: Qualicheck Diagnostic Clinic</a></div>
     <div class="footer-hash">
-      #ARAWNGMAMAMAYAN2026 &nbsp;·&nbsp; #YakapAssistance &nbsp;·&nbsp; #MikaCaravan &nbsp;·&nbsp; #QualicheckCares<br>
+      #ARAWNGMAMAMAYAN2026 &nbsp;·&nbsp; #YakapAssistance &nbsp;·&nbsp; #AMIGA &nbsp;·&nbsp; #QualicheckCares<br>
       #FreeCheckup &nbsp;·&nbsp; #FreeGamot &nbsp;·&nbsp; #SMSanPedro &nbsp;·&nbsp; #SanPedroLaguna &nbsp;·&nbsp;
       #PhilHealth
     </div>
     <div class="footer-hr"></div>
-    <div class="footer-copy">© 2026 Qualicheck Diagnostic Clinic · YAKAP Assistance · Mika Caravan. All rights reserved.
+    <div class="footer-copy">© 2026 Qualicheck Diagnostic Clinic · YAKAP Assistance · AMIGA Caravan. All rights reserved.
     </div>
   </footer>
 
@@ -2372,8 +2405,8 @@
         tracking number ay:</div>
       <div class="modal-tracking" id="modalTracking">ANM-2026-000001</div>
       <div class="modal-event-info">
-        📅 <strong>Mayo 23, 2026</strong> · Sabado<br>
-        🕗 <strong>10:00 AM – 4:00 PM</strong><br>
+        📅 <strong>Hunyo 20, 2026</strong> · Sabado<br>
+        🕗 <strong>9:00 AM – 2:00 PM</strong><br>
         📍 <strong>SM City San Pedro, Laguna</strong><br><br>
         I-present ang tracking number mo upon arrival. Dalhin ang iyong valid ID at PhilHealth ID. Dumating nang maaga —
         first come, first served!
@@ -2381,7 +2414,7 @@
       <div
         style="background:#fff8e1;border:2px solid #f9a825;border-left:5px solid #e65100;border-radius:10px;padding:16px 18px;margin:16px 0;font-size:14px;color:#4a3000;line-height:1.7;text-align:left;">
         ⚠️ &nbsp;<strong style="color:#c43d00;">Paalala:</strong> Ang tracking number na ito ay <strong
-          style="color:#c43d00;">hindi pa opisyal na pagpapatala sa YAKAP.</strong> Pumunta pa rin sa event sa Mayo 23
+          style="color:#c43d00;">hindi pa opisyal na pagpapatala sa YAKAP.</strong> Pumunta pa rin sa event sa Hunyo 20
         para makumpleto ang iyong YAKAP registration.
       </div>
       <div class="modal-desc" style="font-size:12px;">I-screenshot o i-download ang iyong ticket. Ipresenta ito sa araw
@@ -2399,9 +2432,9 @@
   <!-- HIDDEN TICKET CARD -->
   <div id="ticket-card">
     <div class="ticket-header">
-      <div class="ticket-logo-text">🏥 Qualicheck Diagnostic Clinic · YAKAP Assistance · Mika Caravan</div>
+      <div class="ticket-logo-text">🏥 Qualicheck Diagnostic Clinic · YAKAP Assistance · AMIGA Caravan</div>
       <div class="ticket-event-name">ARAW NG MAMAMAYAN 2026</div>
-      <div class="ticket-program">Pre-Registration Ticket · Mayo 23, 2026 · SM City San Pedro</div>
+      <div class="ticket-program">Pre-Registration Ticket · Hunyo 20, 2026 · SM City San Pedro</div>
     </div>
     <div class="ticket-body">
       <div class="ticket-ref">
@@ -2455,7 +2488,7 @@
         <div id="ticket-qr"></div>
       </div>
       <div class="ticket-footer-note">I-present ang ticket na ito upon arrival · Dalhin ang valid ID at PhilHealth
-        ID<br>SM City San Pedro · Mayo 23, 2026 · 10:00 AM – 4:00 PM · First come, first served</div>
+        ID<br>SM City San Pedro · Hunyo 20, 2026 · 9:00 AM – 2:00 PM · First come, first served</div>
     </div>
   </div>
 
@@ -2584,7 +2617,7 @@
         philhealthId: fields.philhealthId,
         dateRegistered: fields.dateRegistered,
         company: fields.company || '',
-        qdcProgramDate: 'May 23, 2026 (Araw ng Mamamayan)',
+        qdcProgramDate: 'June 20, 2026 (Araw ng Mamamayan)',
       };
       fetch(PUBLIC_SHEET_URL, {
         method: 'POST',
@@ -2613,7 +2646,7 @@
         address: document.getElementById('address').value.trim().toUpperCase(),
         philhealthId: document.getElementById('philhealthId').value.trim(),
         company: document.getElementById('company').value.trim().toUpperCase(),
-        qdcProgramDate: 'May 23, 2026 (Araw ng Mamamayan)',
+        qdcProgramDate: 'June 20, 2026 (Araw ng Mamamayan)',
       };
 
       if (!fields.lastName || !fields.firstName || !fields.birthdate || !fields.sex || !fields.contact || !fields.address || !fields.philhealthId) {
@@ -2685,7 +2718,7 @@
         const card = document.getElementById('ticket-card');
         const canvas = await html2canvas(card, { scale: 2, useCORS: true, backgroundColor: '#ffffff' });
         const link = document.createElement('a');
-        link.download = `ArawNgMamamayan2026-${currentTracking}.png`;
+        link.download = `ArawNgMamamayan2026-June20-${currentTracking}.png`;
         link.href = canvas.toDataURL('image/png');
         document.body.appendChild(link); link.click(); document.body.removeChild(link);
         hideLoading(); showToast('✅ Na-download na ang iyong ticket!');
